@@ -1,3 +1,4 @@
+//Reference http://mckoss.com/jscript/object.htm
 Object.prototype.inObj = 1;
  
 function A()
