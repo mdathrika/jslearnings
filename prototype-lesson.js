@@ -1,3 +1,4 @@
+//Reference http://mckoss.com/jscript/object.htm
 Object.prototype.inObj = 1;
  
 function A()
@@ -6,14 +7,15 @@ function A()
 }
  
 A.prototype.inAProto = 3;
- 
-B.prototype = new A;            // Hook up A into B's prototype chain
-B.prototype.constructor = B;
+
 function B()
 {
     this.inB = 4;
 }
- 
+
+B.prototype = new A;            // Hook up A into B's prototype chain
+B.prototype.constructor = B;
+
 B.prototype.inBProto = 5;
  
 x = new B;
